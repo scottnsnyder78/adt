@@ -1,4 +1,4 @@
-import { giveRaise, Worker, sendReminder } from './utils';
+import { giveRaise, Retiree, sendReminder, Worker } from './utils';
 describe('the utilities library', () => {
   describe('sending reminders', () => {
     it('does stuff', () => {

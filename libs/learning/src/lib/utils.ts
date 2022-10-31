@@ -14,12 +14,12 @@ type Person = {
   name: string;
 };
 
-type Employee = Person & {
+export type Employee = Person & {
   salary: number;
   pension?: never;
 };
 
-type Retiree = Person & {
+export type Retiree = Person & {
   pension: number;
   salary?: never;
 };
