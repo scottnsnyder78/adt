@@ -47,6 +47,7 @@ describe('The Bank Account', () => {
 });
 describe('Getting the Last Transaction', () => {
   it('records your last transaction', () => {
+    // Given
     const NOW = '1969-04-20T23:59:00.000Z';
     const mockedNow = new Date(NOW);
     jest
@@ -58,15 +59,17 @@ describe('Getting the Last Transaction', () => {
     const account = new BankAccount();
     const amountToDeposit = 119.42;
 
+    // When
     account.deposit(amountToDeposit);
 
     const lastTransaction = account.getLastTransaction();
 
+    // Then
     expect(lastTransaction).toEqual({
       date: NOW,
       amount: amountToDeposit,
-      id: 'TX867-5309',
       type: 'Deposit',
+      id: 'TX867-5309',
     });
   });
 });
