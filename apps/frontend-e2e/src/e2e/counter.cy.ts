@@ -15,4 +15,10 @@ describe('The Golf Counter', () => {
       cy.get('[data-testid="decrement-button"]').should('be.disabled');
     });
   });
+
+  describe('Incrementing', () => {
+    it('the current count increments', () => {});
+
+    it('the decrement button is enabled', () => {});
+  });
 });
