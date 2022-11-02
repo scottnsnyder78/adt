@@ -16,7 +16,6 @@ describe('ButtonGroupComponent', () => {
       expect(spectator.queryAll('button').length).toBe(0);
     });
   });
-
   describe('Show a single button', () => {
     let output: unknown;
     beforeEach(() => {
@@ -35,12 +34,10 @@ describe('ButtonGroupComponent', () => {
     it('shows one button', () => {
       expect(spectator.queryAll('button').length).toBe(1);
     });
-
     it('displays the label', () => {
       const button = spectator.query<HTMLButtonElement>('button');
       expect(button?.textContent).toBe(' Birds ');
     });
-
     it('clicking the button emits the item', () => {
       const button = spectator.query<HTMLButtonElement>('button');
       expect(output).toBeUndefined();
@@ -49,3 +46,9 @@ describe('ButtonGroupComponent', () => {
     });
   });
 });
+
+/* Practice:
+write tests to verify if an buttongroup item has it's selecte property set to true, it is disalbed.
+
+write a test that says when you click one, it becomes the selected item, and the one that WAS selected is no longer selected.
+*/
